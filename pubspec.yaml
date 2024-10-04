@@ -12,6 +12,7 @@ dependencies:
   get: 4.6.6
   flutter: 
     sdk: flutter
+  fluttertoast: ^8.2.8
 
 dev_dependencies: 
   mockito: ^5.0.16
