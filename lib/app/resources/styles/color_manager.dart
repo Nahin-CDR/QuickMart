@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'extentions/hex_color.dart';
+import '../extentions/hex_color.dart';
 
 class ColorManager{
 

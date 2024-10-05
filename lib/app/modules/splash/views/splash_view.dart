@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:quick_mart/app/resources/color_manager.dart';
+import 'package:quick_mart/app/resources/styles/color_manager.dart';
 import 'package:quick_mart/app/resources/constants/asset_constants.dart';
 import '../controllers/splash_controller.dart';
 
