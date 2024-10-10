@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quick_mart/app/modules/onboard/views/onboard_view.dart';
-import 'package:quick_mart/core/theme/theme_service.dart';
 import '../controllers/home_controller.dart';
 
+
+// HomeView Widget
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    //final ThemeController themeController = Get.find();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -21,7 +21,6 @@ class HomeView extends GetView<HomeController> {
           ),
         ),
         centerTitle: true,
-       // backgroundColor: Colors.teal,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -95,7 +94,6 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  // Language Switcher Button
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -124,7 +122,6 @@ class HomeView extends GetView<HomeController> {
                       inactiveThumbColor: Colors.grey.shade400,
                       inactiveTrackColor: Colors.grey.shade300,
                       onChanged: (bool value) {
-                        Get.to(OnboardView());
                         if (value) {
                           Get.updateLocale(const Locale('bn', 'BD'));
                         } else {
@@ -177,22 +174,13 @@ class HomeView extends GetView<HomeController> {
                       const SizedBox(width: 10),
                       Obx(() {
                         return Switch(
-                          value: controller.themeController.isDarkTheme.value,
+                          value: controller.themeController.isDarkTheme,
                           activeColor: Colors.teal,
                           inactiveThumbColor: Colors.grey.shade400,
                           inactiveTrackColor: Colors.grey.shade300,
                           onChanged: (bool value) {
-                           //ThemeService().changeThemeMode();
-                             controller.themeController.toggleTheme();
-                            //if (value) {
-                                //Get.changeThemeMode(ThemeMode.dark);
-                               // themeController.isDarkTheme.value = true; // Update the state
-                              //} else {
-                              //  Get.changeThemeMode(ThemeMode.light);
-                             //   themeController.isDarkTheme.value = false; // Update the state
-                           //   }
-                          }
-
+                            controller.themeController.toggleTheme();
+                          },
                         );
                       }),
                     ],
@@ -203,7 +191,8 @@ class HomeView extends GetView<HomeController> {
           ],
         ),
       ),
-    //  backgroundColor: Colors.grey.shade200,
     );
   }
 }
+
+
