@@ -36,6 +36,15 @@ QuickMart uses **Clean Architecture** and the **MVVM** design pattern. The proje
 2. **Domain Layer**: Handles the business logic of the application. It contains use cases that act as intermediaries between the presentation layer and the data layer.
 3. **Data Layer**: Contains the repository implementations and data sources (local and remote). It is responsible for fetching and caching data.
 
+## Using GETX CLI
+
+- dart pub global activate get_cli
+  // (to use this add the following to system PATH: [FlutterSDKInstallDir]\bin\cache\dart-sdk\bin
+- flutter pub global activate get_cli
+-   export PATH="$PATH":"$HOME/.pub-cache/bin"
+- get generate locales assets/locales
+- get create page:pageName on folderName
+
 ## Folder Structure
 
 ```bash
