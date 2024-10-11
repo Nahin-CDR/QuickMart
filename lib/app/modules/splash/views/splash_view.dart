@@ -34,7 +34,7 @@ class SplashView extends GetView<SplashController> {
                           Text("uickMart",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
-                                  color: ColorManager.blackMain,
+                                  color: controller.themeController.isDarkTheme? ColorManager.primaryWhite: ColorManager.blackMain,
                                   height: 0.9, // Reduce this to bring texts closer=
                                   fontSize: 55)
                           ),
@@ -43,7 +43,7 @@ class SplashView extends GetView<SplashController> {
                               style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
-                                  color: ColorManager.blackMain,
+                                  color: controller.themeController.isDarkTheme? ColorManager.primaryWhite:ColorManager.blackMain,
                                   height: 0.9
                               )
                           )

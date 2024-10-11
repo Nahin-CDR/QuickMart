@@ -1,10 +1,12 @@
 import 'dart:async';
 import 'package:get/get.dart';
 import 'package:quick_mart/app/routes/app_pages.dart';
+import 'package:quick_mart/core/theme/theme_controller.dart';
 
 class SplashController extends GetxController {
   //TODO: Implement SplashController
 
+  final ThemeController themeController = Get.find<ThemeController>();
   var progressValue = 0.0.obs;
 
   @override
