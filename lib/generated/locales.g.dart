@@ -14,6 +14,12 @@ class LocaleKeys {
   static const appTitle = 'appTitle';
   static const homeViewMessage = 'homeViewMessage';
   static const switchLanguage = 'switchLanguage';
+  static const slider_1_title = 'slider_1_title';
+  static const slider_2_title = 'slider_2_title';
+  static const slider_3_title = 'slider_3_title';
+  static const slider_1_description = 'slider_1_description';
+  static const slider_2_description = 'slider_2_description';
+  static const slider_3_description = 'slider_3_description';
 }
 
 class Locales {
@@ -21,10 +27,28 @@ class Locales {
     'appTitle': 'Home',
     'homeViewMessage': 'HomeView is working',
     'switchLanguage': 'Switch to Bangla',
+    'slider_1_title': 'Explore a wide range of products',
+    'slider_2_title': 'Unlock exclusive offers and discounts',
+    'slider_3_title': 'Safe and secure payments',
+    'slider_1_description':
+        'Explore a wide range of products at your fingertips. QuickMart offers an extensive collection to suit your needs',
+    'slider_2_description':
+        'Get access to limited-time deals and special promotions available only to our valued customers',
+    'slider_3_description':
+        ' QuickMart employs industry-leading encryption and trusted payment gateways to safeguard your financial information',
   };
   static const bn_BD = {
     'appTitle': 'হোম',
     'homeViewMessage': 'হোম ভিউ কাজ করছে',
     'switchLanguage': 'ইংরেজিতে পরিবর্তন করুন',
+    'slider_1_title': 'বিশাল পণ্য ভান্ডারে অনুসন্ধান করুন',
+    'slider_2_title': 'একচেটিয়া অফার এবং ডিসকাউন্ট আনলক করুন',
+    'slider_3_title': 'নিরাপদ এবং নিশ্চিন্ত অর্থ প্রদান',
+    'slider_1_description':
+        'আপনার নখদর্পণে পণ্যের বিস্তৃত পরিসর অনুসন্ধান করুন। QuickMart আপনার প্রয়োজন অনুসারে একটি বিস্তৃত সংগ্রহ অফার করে।',
+    'slider_2_description':
+        'শুধুমাত্র আমাদের মূল্যবান গ্রাহকদের জন্য উপলব্ধ সীমিত সময়ের ডিল এবং বিশেষ প্রচারগুলিতে অ্যাক্সেস পাচ্ছেন এখানে',
+    'slider_3_description':
+        'QuickMart আপনার আর্থিক তথ্য সুরক্ষিত করতে শিল্প-নেতৃস্থানীয় এনক্রিপশন এবং বিশ্বস্ত পেমেন্ট গেটওয়ে নিয়োগ করে',
   };
 }
