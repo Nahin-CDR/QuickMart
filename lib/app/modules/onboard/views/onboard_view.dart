@@ -17,14 +17,14 @@ class OnboardView extends GetView<OnboardController> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: controller.themeController.isDarkTheme? ColorManager.primaryBlack : ColorManager.primaryWhite,
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
 
             SizedBox(
-                height: Get.height / 1.8,
+                height: Get.height / 1.4,
                 child: PageView.builder(
                     scrollDirection: Axis.horizontal,
                     onPageChanged: (value) => controller.onPageChanged(value),
@@ -38,49 +38,88 @@ class OnboardView extends GetView<OnboardController> {
                           image: controller.slides[index].getImage()!,
                           title: controller.slides[index].getTitle()!,
                           description: controller.slides[index].getDescription()!,
+                          themeController: controller.themeController,
                         ),
                       );
                     })
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 32.0, right: 32, top: 0),
+            // next button
+            InkWell(
+              onTap: () {
+                if (kDebugMode) {
+                  print(Get.locale?.languageCode.toString());
+                }
+                if (controller.currentIndex.value < controller.slides.length - 1) {
+                  controller.currentIndex.value = controller.currentIndex.value + 1;
+                  controller.onPageChanged(controller.currentIndex.value);
+                } else {
+                  if (kDebugMode) {
+                    print('controller.currentIndex.value ${controller.currentIndex.value}');
+                  }
+
+                  if(controller.currentIndex.value == controller.slides.length - 1){
+                    //in last index; go to landing screen from tab controller
+                    Get.offNamed(Routes.HOME);
+                  }
+                }
+              },
+              child:  Container(
+                margin: const EdgeInsets.only(top: 24),
+                width: Get.width-40,
+                height: 60,
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                decoration: ShapeDecoration(
+                  color: controller.themeController.isDarkTheme ?
+                  ColorManager.cyanDeep : ColorManager.blackMain,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Next',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontFamily: 'Plus Jakarta Sans',
+                        fontWeight: FontWeight.w600,
+                        height: 0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            Container(
+              margin: const EdgeInsets.only(top: 24),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: List.generate(
-                      controller.slides.length,
-                          (index) => Obx(() {
-                        return buildDot(index, context);
-                      }),
+                  Container(
+                    alignment:Alignment.center,
+                    padding: const EdgeInsets.only(left: 10,top: 5, bottom: 5),
+                    decoration: ShapeDecoration(
+                      color:controller.themeController.isDarkTheme ? ColorManager.cyan50 :ColorManager.cyanLight,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        controller.slides.length,
+                            (index) => Obx(() {
+                          return buildDot(index, context);
+                        }),
+                      ),
                     ),
                   ),
-                  TextButton(
-                    child: LocalisedText(
-                      text: 'next_title',
-                      bnStyle: getBoldStyle13(color: ColorManager.inputField444444),
-                      enStyle: getSemiBoldStyleEn14(color: ColorManager.inputField444444),
-                    ),
-                    onPressed: () {
-                      if (kDebugMode) {
-                        print(Get.locale?.languageCode.toString());
-                      }
-                      if (controller.currentIndex.value < controller.slides.length - 1) {
-                        controller.currentIndex.value = controller.currentIndex.value + 1;
-                        controller.onPageChanged(controller.currentIndex.value);
-                      } else {
-                        if (kDebugMode) {
-                          print('controller.currentIndex.value ${controller.currentIndex.value}');
-                        }
 
-                        if(controller.currentIndex.value == controller.slides.length - 1){
-                          //in last index; go to landing screen from tab controller
-                          Get.offNamed(Routes.HOME);
-                        }
-                      }
-                    },
-                  )
                 ],
               ),
             ),
@@ -94,12 +133,12 @@ class OnboardView extends GetView<OnboardController> {
     // Another Container returned
     return Container(
       height: 6,
-      width: controller.currentIndex.value == index ? 16 : 6,
-      margin: const EdgeInsets.only(right: 5),
+      width: controller.currentIndex.value == index ? 6 : 6,
+      margin: const EdgeInsets.only(right: 6),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(2),
+        borderRadius: BorderRadius.circular(6),
         color: controller.currentIndex.value == index ?
-        ColorManager.primaryPurple522B79 : ColorManager.primaryPurpleDCD5E4,
+        ColorManager.cyanDeep : ColorManager.dotGrey,
       ),
     );
   }

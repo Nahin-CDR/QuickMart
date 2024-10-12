@@ -57,7 +57,10 @@ class ColorManager{
   static Color greyDFE0E6 = HexColor.fromHex("#dfe0e6");
 
   static Color cyan50 = HexColor.fromHex("#212322"); // slider box color in dark mode
+  static Color dotGrey = HexColor.fromHex("#C0C0C0"); // slider box color
   static Color cyanLight = HexColor.fromHex("#F4FDFA"); // slider box color
   static Color cyanDeep = HexColor.fromHex("#21d4b4"); // skip color
   static Color blackMain = HexColor.fromHex("#1C1B1B"); // skip color
+  static Color lightGrey = HexColor.fromHex("#6F7384"); // skip color Color(C0C0C0)
+
 }

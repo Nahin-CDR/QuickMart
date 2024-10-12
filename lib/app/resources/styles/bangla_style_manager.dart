@@ -74,13 +74,13 @@ TextStyle getRegularStyle14(
 }
 
 // regular style15
-TextStyle getRegularStyle15(
-    {double fontSize = FontSize.s15, required Color color}) {
+TextStyle getRegularStyle15({double fontSize = FontSize.s15, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
       fontWeight: FontWeightManager.regular,
-      color: color);
+      color: color
+  );
 }
 
 // bold text style12

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quick_mart/app/resources/styles/color_manager.dart';
 
 class CustomTheme {
   static const lightThemeFont = "ComicNeue", darkThemeFont = "Poppins";
@@ -40,6 +41,9 @@ class CustomTheme {
     brightness: Brightness.dark,
     scaffoldBackgroundColor: black,
     useMaterial3: true,
+    // colorScheme: ColorScheme.highContrastLight(
+    //   primary: ColorManager.primaryWhite
+    // ),
     fontFamily: darkThemeFont,
     switchTheme: SwitchThemeData(
       trackColor:

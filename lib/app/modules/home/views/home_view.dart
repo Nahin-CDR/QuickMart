@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quick_mart/app/routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 
@@ -28,6 +29,12 @@ class HomeView extends GetView<HomeController> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            ElevatedButton(
+                onPressed: (){
+                  Get.toNamed(Routes.ONBOARD);
+                },
+                child: Text("next")
+            ),
             // Top Section with Message
             Container(
               padding: const EdgeInsets.all(20),

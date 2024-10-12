@@ -243,6 +243,14 @@ TextStyle getSemiBoldStyleEn22({double fontSize = FontSize.s22, required Color c
   );
 }
 
+TextStyle getSemiBoldStyleEn24({double fontSize = FontSize.s22, required Color color}) {
+  return getEnglishTextStyle(
+      fontSize: fontSize,
+      fontWeight: FontWeightManager.semiBold,
+      color: color
+  );
+}
+
 /// bold text style
 
 TextStyle getBoldStyleEn({double fontSize = FontSize.s12, required Color color}) {

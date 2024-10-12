@@ -41,7 +41,8 @@ class LocalisedText extends StatelessWidget {
       );
     }else{
       return Text(
-        text.tr,textAlign: textAlignment ?? TextAlign.start,
+        text.tr,
+        textAlign: textAlignment ?? TextAlign.start,
         style: Get.locale?.languageCode.toString() == 'en'? enStyle: bnStyle,
       );
     }

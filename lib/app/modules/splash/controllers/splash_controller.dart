@@ -23,7 +23,7 @@ class SplashController extends GetxController {
       } else {
         timer.cancel();
         Get.offAllNamed(
-          Routes.ONBOARD
+          Routes.HOME
         );
       }
     });
