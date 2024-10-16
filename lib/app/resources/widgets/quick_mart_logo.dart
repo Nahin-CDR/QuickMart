@@ -1,43 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import '../../../core/theme/theme_controller.dart';
 import '../constants/asset_constants.dart';
 import '../styles/color_manager.dart';
 
 
-Widget quickMartLogo({required ThemeController themeController,required double height}){
+Widget quickMartLogo({required double height,required double logoHeight}){
   return  SizedBox(
     height: height,
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(AssetConstants.logo),
+            SvgPicture.asset(AssetConstants.logo,height: logoHeight),
             SizedBox(
-              height: 78,
+              height: 40,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("uickMart",
                       style: TextStyle(
                           fontWeight: FontWeight.w700,
-                          color: themeController.isDarkTheme? ColorManager.primaryWhite: ColorManager.blackMain,
+                          color: Get.isDarkMode ? ColorManager.primaryWhite: ColorManager.blackMain,
                           height: 0.9, // Reduce this to bring texts closer=
-                          fontSize: 55)
-                  ),
-                  Text(
-                      "Asia’s No 1 Ecommerce App",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: themeController.isDarkTheme? ColorManager.primaryWhite:ColorManager.blackMain,
-                          height: 0.9
+                          fontSize: 24
                       )
-                  )
+                  ),
                 ],
               ),
             ),

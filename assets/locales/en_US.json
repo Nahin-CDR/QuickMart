@@ -7,6 +7,15 @@
   "slider_3_title" : "Safe and secure payments",
   "slider_1_description" : "Explore a wide range of products at your fingertips. QuickMart offers an extensive collection to suit your needs",
   "slider_2_description" : "Get access to limited-time deals and special promotions available only to our valued customers",
-  "slider_3_description" : " QuickMart employs industry-leading encryption and trusted payment gateways to safeguard your financial information"
+  "slider_3_description" : " QuickMart employs industry-leading encryption and trusted payment gateways to safeguard your financial information",
+
+  "have_an_account" : "Already have an account?",
+  "signup" : "Sign Up",
+  "login" : "Log in",
+  "full_name" : "Full Name",
+  "email" : "Email",
+  "password" : "Password",
+  "create_account" : "Create Account",
+  "signup_with_google" : "Signup with Google"
 
 }

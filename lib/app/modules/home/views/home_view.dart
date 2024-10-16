@@ -31,7 +31,7 @@ class HomeView extends GetView<HomeController> {
           children: [
             ElevatedButton(
                 onPressed: (){
-                  Get.toNamed(Routes.ONBOARD);
+                  Get.toNamed(Routes.SPLASH);
                 },
                 child: Text("next")
             ),

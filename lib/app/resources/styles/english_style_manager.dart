@@ -21,6 +21,24 @@ TextStyle getEnglishTextStyle({required double fontSize,required FontWeight font
 
 }
 
+TextStyle getEnglishTextStylePlusJakarta({required double fontSize,required FontWeight fontWeight,
+  required Color color,TextDecoration? textDecoration,double? height,double? letterSpacing}) {
+  if(height != null && letterSpacing != null){
+    return GoogleFonts.plusJakartaSans(
+        height: height,
+        letterSpacing: letterSpacing,
+        fontSize: fontSize,
+        color: color,
+        fontWeight: fontWeight
+    );
+  }
+  return GoogleFonts.plusJakartaSans(
+        fontSize: fontSize,
+        color: color,
+        fontWeight: fontWeight
+    );
+}
+
 TextStyle getEnglishGradientTextStyle(double fontSize, FontWeight fontWeight, Color color, TextDecoration decoration) {
   return GoogleFonts.inter(
       fontSize: fontSize,
@@ -64,12 +82,35 @@ TextStyle getRegularStyleEn13({double fontSize = FontSize.s13, required Color co
 }
 
 TextStyle getRegularStyleEn14({double fontSize = FontSize.s14, required Color color}) {
-  return getEnglishTextStyle(
+  return getEnglishTextStylePlusJakarta(
+      //height: .9,
+      letterSpacing: 0.07,
       fontSize: fontSize,
       fontWeight: FontWeightManager.regular,
       color: color
   );
 }
+
+TextStyle getSemiBoldStyleEn14PlusJakarta({double fontSize = FontSize.s14, required Color color}) {
+  return getEnglishTextStylePlusJakarta(
+    //height: .9,
+      letterSpacing: 0.07,
+      fontSize: fontSize,
+      fontWeight: FontWeightManager.semiBold,
+      color: color
+  );
+}
+
+TextStyle getBoldStyleEnPlusJakarta({double fontSize = FontSize.s14, required Color color}) {
+  return getEnglishTextStylePlusJakarta(
+    //height: .9,
+      letterSpacing: 0.07,
+      fontSize: fontSize,
+      fontWeight: FontWeightManager.bold,
+      color: color
+  );
+}
+
 
 TextStyle getSemiBoldStyleEn16({double fontSize = FontSize.s16, required Color color}) {
   return getEnglishTextStyle(
@@ -244,7 +285,7 @@ TextStyle getSemiBoldStyleEn22({double fontSize = FontSize.s22, required Color c
 }
 
 TextStyle getSemiBoldStyleEn24({double fontSize = FontSize.s22, required Color color}) {
-  return getEnglishTextStyle(
+  return getEnglishTextStylePlusJakarta(
       fontSize: fontSize,
       fontWeight: FontWeightManager.semiBold,
       color: color

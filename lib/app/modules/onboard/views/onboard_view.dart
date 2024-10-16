@@ -5,7 +5,7 @@ import '../../../resources/styles/bangla_style_manager.dart';
 import '../../../resources/styles/color_manager.dart';
 import '../../../resources/styles/english_style_manager.dart';
 import '../../../resources/widgets/localised_text.dart';
-import '../../../resources/widgets/slider.dart';
+import '../../../resources/widgets/onboard/slider.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/onboard_controller.dart';
 
@@ -59,7 +59,7 @@ class OnboardView extends GetView<OnboardController> {
 
                   if(controller.currentIndex.value == controller.slides.length - 1){
                     //in last index; go to landing screen from tab controller
-                    Get.offNamed(Routes.HOME);
+                    Get.offNamed(Routes.SIGNUP);
                   }
                 }
               },

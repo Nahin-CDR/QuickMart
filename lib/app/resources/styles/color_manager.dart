@@ -61,6 +61,6 @@ class ColorManager{
   static Color cyanLight = HexColor.fromHex("#F4FDFA"); // slider box color
   static Color cyanDeep = HexColor.fromHex("#21d4b4"); // skip color
   static Color blackMain = HexColor.fromHex("#1C1B1B"); // skip color
-  static Color lightGrey = HexColor.fromHex("#6F7384"); // skip color Color(C0C0C0)
-
+  static Color lightGrey = HexColor.fromHex("#6F7384");
+  static Color lightGrey2 = HexColor.fromHex("#F4F5FD"); // skip color
 }

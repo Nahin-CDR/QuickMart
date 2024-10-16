@@ -36,3 +36,7 @@ flutter:
       fonts:
         - asset: assets/fonts/SolaimanLipi_Bold.ttf
         - asset: assets/fonts/SolaimanLipi_Normal.ttf
+    - family: PlusJakartaSans
+      fonts:
+        - asset: assets/fonts/PlusJakartaSans.ttf
+        - asset: assets/fonts/PlusJakartaSans_Italic.ttf

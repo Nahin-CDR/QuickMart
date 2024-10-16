@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class FontManager{
   static const String fontFamily = "SolaimanLipi";
+  static const String plusJakartaSans = "PlusJakartaSans";
 }
 
 class FontWeightManager {

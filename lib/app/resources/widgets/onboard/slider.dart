@@ -8,11 +8,11 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:quick_mart/app/resources/styles/font_manager.dart';
 import 'package:quick_mart/app/resources/widgets/quick_mart_logo.dart';
 import 'package:quick_mart/core/theme/theme_controller.dart';
-import '../constants/asset_constants.dart';
-import '../styles/bangla_style_manager.dart';
-import '../styles/color_manager.dart';
-import '../styles/english_style_manager.dart';
-import 'localised_text.dart';
+import '../../constants/asset_constants.dart';
+import '../../styles/bangla_style_manager.dart';
+import '../../styles/color_manager.dart';
+import '../../styles/english_style_manager.dart';
+import '../localised_text.dart';
 
 class SliderWidget extends StatelessWidget {
   String image, title, description;
@@ -140,12 +140,13 @@ class OnboardingImage extends StatelessWidget {
                   style: TextStyle(
                     color: ColorManager.cyanDeep,
                     fontSize: 14,
-                    fontFamily: 'Plus Jakarta Sans',
+                    fontFamily: FontManager.plusJakartaSans,
                     fontWeight: FontWeight.w500,
                     height: 0.11,
                     letterSpacing: 0.07,
                   ),
-                ),)
+                )
+              )
 
             ],
           ),

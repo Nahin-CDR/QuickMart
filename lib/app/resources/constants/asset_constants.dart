@@ -8,6 +8,7 @@ class AssetConstants{
   // icons ===========================
   static const logo = 'assets/icons/svg/logo.svg';
   static const arrowLeft = 'assets/icons/svg/arrow_left.svg';
+  static const googleSvg = 'assets/icons/svg/google.svg';
 
 
 

@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
 import 'font_manager.dart';
 
-TextStyle _getTextStyle(
-    {required double fontSize,
-      required String fontFamily,
-      required FontWeight fontWeight,
-      required Color color,
-      TextDecoration? textDecoration}) {
+TextStyle _getTextStyle({
+  required double fontSize,
+  required String fontFamily,
+  required FontWeight fontWeight,
+  required Color color,
+  TextDecoration? textDecoration}) {
   if (textDecoration != null) {
     return TextStyle(
         fontSize: fontSize,
         fontFamily: fontFamily,
         color: color,
         fontWeight: fontWeight,
-        decoration: textDecoration);
+        decoration: textDecoration
+    );
   } else {
     return TextStyle(
         fontSize: fontSize,
         fontFamily: fontFamily,
         color: color,
-        fontWeight: fontWeight);
+        fontWeight: fontWeight
+    );
   }
 }
 
-TextStyle getBanglaGradientTextStyle(double fontSize, FontWeight fontWeight,
-    Color color, TextDecoration decoration) {
+TextStyle getBanglaGradientTextStyle(double fontSize, FontWeight fontWeight, Color color, TextDecoration decoration) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -34,8 +35,7 @@ TextStyle getBanglaGradientTextStyle(double fontSize, FontWeight fontWeight,
 }
 
 // regular style11
-TextStyle getRegularStyle11(
-    {double fontSize = FontSize.s11, required Color color}) {
+TextStyle getRegularStyle11({double fontSize = FontSize.s11, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -44,8 +44,7 @@ TextStyle getRegularStyle11(
 }
 
 // regular style11
-TextStyle getRegularStyle12(
-    {double fontSize = FontSize.s12, required Color color}) {
+TextStyle getRegularStyle12({double fontSize = FontSize.s12, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -54,8 +53,7 @@ TextStyle getRegularStyle12(
 }
 
 // regular style13
-TextStyle getRegularStyle13(
-    {double fontSize = FontSize.s13, required Color color}) {
+TextStyle getRegularStyle13({double fontSize = FontSize.s13, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -64,8 +62,7 @@ TextStyle getRegularStyle13(
 }
 
 // regular style14
-TextStyle getRegularStyle14(
-    {double fontSize = FontSize.s14, required Color color}) {
+TextStyle getRegularStyle14({double fontSize = FontSize.s14, required Color color}) {
   return _getTextStyle(
       fontFamily: FontManager.fontFamily,
       fontWeight: FontWeightManager.regular,
@@ -84,8 +81,7 @@ TextStyle getRegularStyle15({double fontSize = FontSize.s15, required Color colo
 }
 
 // bold text style12
-TextStyle getBoldStyle12(
-    {double fontSize = FontSize.s12, required Color color}) {
+TextStyle getBoldStyle12({double fontSize = FontSize.s12, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -94,10 +90,7 @@ TextStyle getBoldStyle12(
 }
 
 // bold text style13
-TextStyle getBoldStyle13(
-    {double fontSize = FontSize.s13,
-      required Color color,
-      TextDecoration? textDecoration}) {
+TextStyle getBoldStyle13({double fontSize = FontSize.s13, required Color color, TextDecoration? textDecoration}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -107,8 +100,7 @@ TextStyle getBoldStyle13(
 }
 
 // bold text style14
-TextStyle getBoldStyle14(
-    {double fontSize = FontSize.s14, required Color color}) {
+TextStyle getBoldStyle14({double fontSize = FontSize.s14, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -117,8 +109,7 @@ TextStyle getBoldStyle14(
 }
 
 // bold text style16
-TextStyle getBoldStyle16(
-    {double fontSize = FontSize.s16, required Color color}) {
+TextStyle getBoldStyle16({double fontSize = FontSize.s16, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -127,8 +118,7 @@ TextStyle getBoldStyle16(
 }
 
 // bold text style15
-TextStyle getBoldStyle15(
-    {double fontSize = FontSize.s15, required Color color}) {
+TextStyle getBoldStyle15({double fontSize = FontSize.s15, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -137,8 +127,7 @@ TextStyle getBoldStyle15(
 }
 
 // bold text style15
-TextStyle getBoldStyle17(
-    {double fontSize = FontSize.s17, required Color color}) {
+TextStyle getBoldStyle17({double fontSize = FontSize.s17, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -146,8 +135,7 @@ TextStyle getBoldStyle17(
       color: color);
 }
 
-TextStyle getBoldStyle18(
-    {double fontSize = FontSize.s18, required Color color}) {
+TextStyle getBoldStyle18({double fontSize = FontSize.s18, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -156,8 +144,7 @@ TextStyle getBoldStyle18(
 }
 
 // bold text style19
-TextStyle getBoldStyle19(
-    {double fontSize = FontSize.s19, required Color color}) {
+TextStyle getBoldStyle19({double fontSize = FontSize.s19, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -166,8 +153,7 @@ TextStyle getBoldStyle19(
 }
 
 // bold text style 20
-TextStyle getBoldStyle20(
-    {double fontSize = FontSize.s20, required Color color}) {
+TextStyle getBoldStyle20({double fontSize = FontSize.s20, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,
@@ -176,8 +162,7 @@ TextStyle getBoldStyle20(
 }
 
 // bold text style21
-TextStyle getBoldStyle21(
-    {double fontSize = FontSize.s21, required Color color}) {
+TextStyle getBoldStyle21({double fontSize = FontSize.s21, required Color color}) {
   return _getTextStyle(
       fontSize: fontSize,
       fontFamily: FontManager.fontFamily,

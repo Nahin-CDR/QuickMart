@@ -20,6 +20,14 @@ class LocaleKeys {
   static const slider_1_description = 'slider_1_description';
   static const slider_2_description = 'slider_2_description';
   static const slider_3_description = 'slider_3_description';
+  static const have_an_account = 'have_an_account';
+  static const signup = 'signup';
+  static const login = 'login';
+  static const full_name = 'full_name';
+  static const email = 'email';
+  static const password = 'password';
+  static const create_account = 'create_account';
+  static const signup_with_google = 'signup_with_google';
 }
 
 class Locales {
@@ -36,6 +44,14 @@ class Locales {
         'Get access to limited-time deals and special promotions available only to our valued customers',
     'slider_3_description':
         ' QuickMart employs industry-leading encryption and trusted payment gateways to safeguard your financial information',
+    'have_an_account': 'Already have an account?',
+    'signup': 'Sign Up',
+    'login': 'Log in',
+    'full_name': 'Full Name',
+    'email': 'Email',
+    'password': 'Password',
+    'create_account': 'Create Account',
+    'signup_with_google': 'Signup with Google',
   };
   static const bn_BD = {
     'appTitle': 'হোম',
@@ -50,5 +66,13 @@ class Locales {
         'শুধুমাত্র আমাদের মূল্যবান গ্রাহকদের জন্য উপলব্ধ সীমিত সময়ের ডিল এবং বিশেষ প্রচারগুলিতে অ্যাক্সেস পাচ্ছেন এখানে',
     'slider_3_description':
         'QuickMart আপনার আর্থিক তথ্য সুরক্ষিত করতে শিল্প-নেতৃস্থানীয় এনক্রিপশন এবং বিশ্বস্ত পেমেন্ট গেটওয়ে নিয়োগ করে',
+    'have_an_account': 'ইতিমধ্যে একটি অ্যাকাউন্ট আছে?',
+    'signup': 'সাইন আপ করুন',
+    'login': 'লগ ইন করুন',
+    'full_name': 'পুরো নাম',
+    'email': 'ইমেইল',
+    'password': 'পাসওয়ার্ড',
+    'create_account': 'অ্যাকাউন্ট তৈরি করুন',
+    'signup_with_google': 'গুগল দিয়ে সাইন আপ করুন',
   };
 }
