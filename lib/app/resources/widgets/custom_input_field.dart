@@ -47,7 +47,7 @@ class CustomInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color:  Get.isDarkMode ? ColorManager.primaryBlack : ColorManager.lightGrey,//backgroundColor ?? Colors.white,
+        color:  Get.isDarkMode ? ColorManager.primaryBlack : ColorManager.primaryWhite,//backgroundColor ?? Colors.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: (focusNode?.hasFocus == true)
             ? [

@@ -5,201 +5,178 @@ import '../controllers/home_controller.dart';
 
 
 // HomeView Widget
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../controllers/home_controller.dart';
+
+// HomeView Widget
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.teal.shade300,
         title: Text(
-          'appTitle'.tr,
+          'Settings'.tr,
           style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
         ),
-        centerTitle: true,
+        elevation: 0,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            ElevatedButton(
-                onPressed: (){
-                  Get.toNamed(Routes.SPLASH);
-                },
-                child: Text("next")
-            ),
-            // Top Section with Message
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.teal.shade100,
-                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Personal Information Section
+              _buildSectionTitle('Personal Information'),
+              const SizedBox(height: 10),
+              _buildListTile(
+                context,
+                icon: Icons.local_shipping_rounded,
+                title: 'Shipping Address',
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'homeViewMessage'.tr,
-                    style: const TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.teal,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 20),
-                  const Icon(
-                    Icons.home_rounded,
-                    size: 60,
-                    color: Colors.teal,
-                  ),
-                ],
+              _buildListTile(
+                context,
+                icon: Icons.credit_card_rounded,
+                title: 'Payment Method',
               ),
-            ),
-            const SizedBox(height: 50),
+              _buildListTile(
+                context,
+                icon: Icons.history_rounded,
+                title: 'Order History',
+              ),
+              const SizedBox(height: 30),
 
-            // Language Switcher Section
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.teal, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
-                    spreadRadius: 2,
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
+              // Support & Information Section
+              _buildSectionTitle('Support & Information'),
+              const SizedBox(height: 10),
+              _buildListTile(
+                context,
+                icon: Icons.privacy_tip_rounded,
+                title: 'Privacy Policy',
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Language Settings',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.language_rounded,
-                        size: 30,
-                        color: Colors.teal,
-                      ),
-                      const SizedBox(width: 10),
-                      Text(
-                        Get.locale?.languageCode == 'bn' ? 'বাংলা' : 'English',
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.teal,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-                  Transform.scale(
-                    scale: 1.5,
-                    child: Switch(
-                      value: Get.locale?.languageCode == 'bn',
-                      activeColor: Colors.teal,
-                      inactiveThumbColor: Colors.grey.shade400,
-                      inactiveTrackColor: Colors.grey.shade300,
-                      onChanged: (bool value) {
-                        if (value) {
-                          Get.updateLocale(const Locale('bn', 'BD'));
-                        } else {
-                          Get.updateLocale(const Locale('en', 'US'));
-                        }
-                      },
-                    ),
-                  ),
-                ],
+              _buildListTile(
+                context,
+                icon: Icons.description_rounded,
+                title: 'Terms & Conditions',
               ),
-            ),
-            const SizedBox(height: 50),
+              _buildListTile(
+                context,
+                icon: Icons.help_rounded,
+                title: 'FAQs',
+              ),
+              const SizedBox(height: 30),
 
-            // Theme Switcher Section
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.teal, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
-                    spreadRadius: 2,
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
+              // Account Management Section
+              _buildSectionTitle('Account Management'),
+              const SizedBox(height: 10),
+              _buildListTile(
+                context,
+                icon: Icons.lock_rounded,
+                title: 'Change Password',
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Theme Settings',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.brightness_6,
-                        size: 30,
-                        color: Colors.teal,
-                      ),
-                      const SizedBox(width: 10),
-                      Obx(() {
-                        return Switch(
-                          value: controller.themeController.isDarkTheme,
-                          activeColor: Colors.teal,
-                          inactiveThumbColor: Colors.grey.shade400,
-                          inactiveTrackColor: Colors.grey.shade300,
-                          onChanged: (bool value) {
-                            controller.themeController.toggleTheme();
-                          },
-                        );
-                      }),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
+
+              // Language Switch Section
+              _buildLanguageSwitch(context),
+              const SizedBox(height: 30),
+
+              // Theme Switch Section
+              _buildThemeSwitch(context),
+            ],
+          ),
         ),
       ),
     );
   }
+
+  // Build Section Title
+  Widget _buildSectionTitle(String title) {
+    return Text(
+      title,
+      style: const TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: Colors.black54,
+      ),
+    );
+  }
+
+  // Build List Tile
+  Widget _buildListTile(BuildContext context, {required IconData icon, required String title}) {
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(vertical: 4.0),
+      leading: Icon(icon, color: Colors.teal),
+      title: Text(
+        title.tr,
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+      ),
+      trailing: const Icon(Icons.chevron_right_rounded),
+      onTap: () {
+        // Add navigation or functionality here
+      },
+    );
+  }
+
+  // Build Theme Switch Widget
+  Widget _buildThemeSwitch(BuildContext context) {
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(vertical: 4.0),
+      leading: const Icon(Icons.phone_android_rounded, color: Colors.teal),
+      title: Text(
+        'Dark Theme'.tr,
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+      ),
+      trailing: Obx(() {
+        return Switch(
+          value: controller.themeController.isDarkTheme,
+          activeColor: Colors.teal,
+          onChanged: (value) {
+            controller.themeController.toggleTheme();
+          },
+        );
+      }),
+    );
+  }
+
+  // Build Language Switch Widget
+  Widget _buildLanguageSwitch(BuildContext context) {
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(vertical: 4.0),
+      leading: const Icon(Icons.language_rounded, color: Colors.teal),
+      title: Text(
+        'Language'.tr,
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+      ),
+      trailing: Switch(
+        value: Get.locale?.languageCode == 'bn',
+        activeColor: Colors.teal,
+        onChanged: (bool value) {
+          if (value) {
+            Get.updateLocale(const Locale('bn', 'BD'));
+          } else {
+            Get.updateLocale(const Locale('en', 'US'));
+          }
+        },
+      ),
+    );
+  }
 }
+
+
+
+
 
 

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quick_mart/app/resources/styles/english_style_manager.dart';
@@ -6,6 +7,7 @@ import 'package:quick_mart/app/resources/widgets/field_title.dart';
 import 'package:quick_mart/app/resources/widgets/localised_text.dart';
 import 'package:quick_mart/app/resources/widgets/quick_mart_logo.dart';
 import 'package:quick_mart/app/resources/widgets/universal_button.dart';
+import 'package:quick_mart/app/routes/app_pages.dart';
 import '../../../../resources/styles/bangla_style_manager.dart';
 import '../../../../resources/styles/color_manager.dart';
 import '../../../../resources/styles/font_manager.dart';
@@ -99,7 +101,12 @@ class SignupView extends GetView<SignupController> {
                     isEnabled:true
                 ),
                 UniversalButton(
-                    onPress: (){},
+                    onPress: (){
+                      if (kDebugMode) {
+                        print("ddd");
+                      }
+                      Get.toNamed(Routes.VERIFY);
+                    },
                     buttonWidth:Get.width,
                     backgroundColor: ColorManager.blackMain,
                     buttonText: 'create_account'

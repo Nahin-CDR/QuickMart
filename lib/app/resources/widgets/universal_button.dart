@@ -14,6 +14,7 @@ class UniversalButton extends StatelessWidget {
   final String? icon;
   final Color backgroundColor;
   final String buttonText;
+
   const UniversalButton({
     super.key,
     required this.onPress,
@@ -26,13 +27,12 @@ class UniversalButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    if(isLoginWithGoogle != null){
+    if (isLoginWithGoogle != null) {
       return Container(
         margin: const EdgeInsets.only(top: 24),
         child: InkWell(
-          onTap: () => onPress,
-          child:  Container(
+          onTap: () => onPress(),  // Corrected onPress call
+          child: Container(
             width: buttonWidth,
             height: 60,
             padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -41,8 +41,8 @@ class UniversalButton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
                 side: BorderSide(
-                  color: Get.isDarkMode ? ColorManager.primaryWhite : ColorManager.lightGrey, // Add border color here
-                  width: .8, // Optional: set the width of the border
+                  color: Get.isDarkMode ? ColorManager.primaryWhite : ColorManager.lightGrey,
+                  width: .8,
                 ),
               ),
             ),
@@ -71,22 +71,20 @@ class UniversalButton extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ),
       );
-    }
-    else if(icon != null){
+    } else if (icon != null) {
       return Container(
         margin: const EdgeInsets.only(top: 24),
         child: InkWell(
-          onTap: () => onPress,
-          child:  Container(
+          onTap: () => onPress(),  // Corrected onPress call
+          child: Container(
             width: buttonWidth,
             height: 60,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: ShapeDecoration(
-              color: Get.isDarkMode ?
-              ColorManager.cyanDeep : ColorManager.blackMain,
+              color: Get.isDarkMode ? ColorManager.cyanDeep : ColorManager.blackMain,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -99,43 +97,37 @@ class UniversalButton extends StatelessWidget {
                 LocalisedText(
                   text: buttonText,
                   enStyle: getEnglishTextStylePlusJakarta(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      color: Get.isDarkMode ?
-                      ColorManager.primaryWhite : ColorManager.primaryWhite
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Get.isDarkMode ? ColorManager.primaryWhite : ColorManager.primaryWhite,
                   ),
                   bnStyle: getSemiBoldStyle(
-
-                      fontSize: 14,
-                      // fontWeight: FontWeight.w600,
-                      color: Get.isDarkMode ?
-                      ColorManager.primaryWhite : ColorManager.primaryWhite
+                    fontSize: 14,
+                    color: Get.isDarkMode ? ColorManager.primaryWhite : ColorManager.primaryWhite,
                   ),
                 ),
                 const Spacer(),
                 SizedBox(
-                    height: 24,
-                    width: 24,
-                    child:  SvgPicture.asset(icon!),
-                  )
+                  height: 24,
+                  width: 24,
+                  child: SvgPicture.asset(icon!),
+                ),
               ],
             ),
           ),
         ),
       );
-    }
-    else{
+    } else {
       return Container(
         margin: const EdgeInsets.only(top: 24),
         child: InkWell(
-          onTap: () => onPress,
-          child:  Container(
+          onTap: () => onPress(),  // Corrected onPress call
+          child: Container(
             width: buttonWidth,
             height: 60,
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: ShapeDecoration(
-              color: Get.isDarkMode ?
-              ColorManager.cyanDeep : ColorManager.blackMain,
+              color: Get.isDarkMode ? ColorManager.cyanDeep : ColorManager.blackMain,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -148,24 +140,20 @@ class UniversalButton extends StatelessWidget {
                 LocalisedText(
                   text: buttonText,
                   enStyle: getEnglishTextStylePlusJakarta(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w600,
-                      color: Get.isDarkMode ?
-                      ColorManager.primaryWhite : ColorManager.primaryWhite
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Get.isDarkMode ? ColorManager.primaryWhite : ColorManager.primaryWhite,
                   ),
                   bnStyle: getSemiBoldStyle(
-
-                      fontSize: 14,
-                      // fontWeight: FontWeight.w600,
-                      color: Get.isDarkMode ?
-                      ColorManager.primaryWhite : ColorManager.primaryWhite
+                    fontSize: 14,
+                    color: Get.isDarkMode ? ColorManager.primaryWhite : ColorManager.primaryWhite,
                   ),
                 ),
-                if (icon!= null)
+                if (icon != null)
                   SizedBox(
                     height: 24,
                     width: 24,
-                    child:  SvgPicture.asset(icon!),
+                    child: SvgPicture.asset(icon!),
                   )
               ],
             ),
@@ -173,6 +161,6 @@ class UniversalButton extends StatelessWidget {
         ),
       );
     }
-
   }
 }
+
