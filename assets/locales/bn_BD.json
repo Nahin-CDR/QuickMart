@@ -16,6 +16,7 @@
   "email" : "ইমেইল",
   "password" : "পাসওয়ার্ড",
   "create_account" : "অ্যাকাউন্ট তৈরি করুন",
-  "signup_with_google" : "গুগল দিয়ে সাইন আপ করুন"
+  "signup_with_google" : "গুগল দিয়ে সাইন আপ করুন",
+  "personal_info" : "ব্যক্তিগত তথ্য"
 
 }

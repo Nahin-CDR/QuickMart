@@ -16,6 +16,7 @@
   "email" : "Email",
   "password" : "Password",
   "create_account" : "Create Account",
-  "signup_with_google" : "Signup with Google"
+  "signup_with_google" : "Signup with Google",
+  "personal_info" : "Personal Information"
 
 }

@@ -63,4 +63,5 @@ class ColorManager{
   static Color blackMain = HexColor.fromHex("#1C1B1B"); // skip color
   static Color lightGrey = HexColor.fromHex("#6F7384");
   static Color lightGrey2 = HexColor.fromHex("#F4F5FD"); // skip color
+  static Color tealPrimary = HexColor.fromHex("#1ED4B5"); // skip color
 }

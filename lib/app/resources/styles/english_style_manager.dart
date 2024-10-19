@@ -128,6 +128,16 @@ TextStyle getRegularStyleEn16({double fontSize = FontSize.s16, required Color co
   );
 }
 
+TextStyle getBoldStyleJakartaEn16({double fontSize = FontSize.s16, required Color color}) {
+  return getEnglishTextStylePlusJakarta(
+    //height: .9,
+      letterSpacing: 0.07,
+      fontSize: fontSize,
+      fontWeight: FontWeightManager.bold,
+      color: color
+  );
+}
+
 /// light text style
 
 TextStyle getLightStyleEn({double fontSize = FontSize.s12, required Color color}) {

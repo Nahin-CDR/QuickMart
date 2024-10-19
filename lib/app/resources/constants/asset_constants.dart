@@ -4,6 +4,7 @@ class AssetConstants{
   static const slider1 = 'assets/images/slider1.png';
   static const slider2 = 'assets/images/slider2.png';
   static const slider3 = 'assets/images/slider3.png';
+  static const profile = 'assets/images/profile.png';
 
   // icons ===========================
   static const logo = 'assets/icons/svg/logo.svg';

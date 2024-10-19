@@ -28,6 +28,7 @@ class LocaleKeys {
   static const password = 'password';
   static const create_account = 'create_account';
   static const signup_with_google = 'signup_with_google';
+  static const personal_info = 'personal_info';
 }
 
 class Locales {
@@ -52,6 +53,7 @@ class Locales {
     'password': 'Password',
     'create_account': 'Create Account',
     'signup_with_google': 'Signup with Google',
+    'personal_info': 'Personal Information',
   };
   static const bn_BD = {
     'appTitle': 'হোম',
@@ -74,5 +76,6 @@ class Locales {
     'password': 'পাসওয়ার্ড',
     'create_account': 'অ্যাকাউন্ট তৈরি করুন',
     'signup_with_google': 'গুগল দিয়ে সাইন আপ করুন',
+    'personal_info': 'ব্যক্তিগত তথ্য',
   };
 }
